@@ -9,3 +9,10 @@ TournyMadness.TournamentRoute = Ember.Route.extend({
     return this.store.find('tournament', params.tournament_id);
   }
 });
+
+TournyMadness.TournamentGameRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('game', params.game_id);
+  }
+});
+

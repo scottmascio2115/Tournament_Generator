@@ -6,6 +6,7 @@
 [x] Create association on both sides for 'has' many through relationship
 [x] Ask how to do has many through relationship
 [x] Create routes and resources for individual show pages
-[] Create as many links as possible to all associations
 [x] Create associations in the serializers
-[] Set up git hub repo 
+[x] Set up git hub repo 
+[] Create as many links as possible to all associations
+[] Create links for games through tournaments
