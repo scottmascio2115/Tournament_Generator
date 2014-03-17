@@ -1,0 +1,20 @@
+TournyMadness.Player = DS.Model.extend({
+  name: DS.attr('string'),
+  twitter_handle: DS.attr('string'),
+  personal_url: DS.attr('string'),
+  phone: DS.attr('string'),
+  bio: DS.attr('string'),
+  captain: DS.attr('boolean'),
+  tournament_creator: DS.attr('boolean'),
+  city: DS.attr('string'),
+  state: DS.attr('string'),
+  zip: DS.attr('number'),
+  games_won: DS.attr('number'),
+  games_lost: DS.attr('number'),
+  games_played: DS.attr('number'),
+  tournaments_won: DS.attr('number'),
+  tournaments_lost: DS.attr('number'),
+  tournaments_played: DS.attr('number'),
+  user: DS.belongsTo('user'),
+  teams: DS.hasMany("team")
+});

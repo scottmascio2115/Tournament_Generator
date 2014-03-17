@@ -1,0 +1,9 @@
+  <h1>Tournament {{name}}</h1>
+
+ <ul>
+  {{#each game in games}}
+    <li>Game {{id}}: {{#link-to 'tournament.game' this }}{{game.home_team.jersey_name}} vs {{game.away_team.jersey_name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

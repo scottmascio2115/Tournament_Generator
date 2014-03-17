@@ -1,0 +1,11 @@
+[x] Finish associations
+[x] Fix seed data so teams have players
+[x] Ask about has many through be sure to double check all associations
+[x] Figure Out how to get data to persist
+[x] Add controllers and views and routes for ember models
+[x] Create association on both sides for 'has' many through relationship
+[x] Ask how to do has many through relationship
+[x] Create routes and resources for individual show pages
+[] Create as many links as possible to all associations
+[x] Create associations in the serializers
+[] Set up git hub repo 

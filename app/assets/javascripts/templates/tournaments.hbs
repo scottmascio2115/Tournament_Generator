@@ -1,0 +1,7 @@
+<h1>Tournaments</h1>
+
+<ul>
+  {{#each}}
+    <li>Tournament {{id}}: {{#link-to 'tournament' this }}{{name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
