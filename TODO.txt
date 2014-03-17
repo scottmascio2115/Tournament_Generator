@@ -7,6 +7,9 @@
 [x] Ask how to do has many through relationship
 [x] Create routes and resources for individual show pages
 [x] Create associations in the serializers
-[x] Set up git hub repo 
-[] Create as many links as possible to all associations
-[] Create links for games through tournaments
+[x] Set up git hub repo
+[x] Create links for games through tournaments
+[x] Create as many links as possible to all associations
+[] Redo seed data to include more players to show up after click captain name 
+[] Re-organize tempalates in directory
+[] Create team show pages and links from tournament show page

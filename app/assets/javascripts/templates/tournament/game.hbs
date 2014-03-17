@@ -1,4 +1,15 @@
 <ul>
     <li>Home Team Captain: {{home_team.captain}}</li>
+       <li>Home Team Players</li>
+      {{#each player in home_team.players}}
+        <li>Home Team Players</li>
+        <li>Player {{player.id}}: {{player.name}}</li>
+      {{/each}}
+
     <li>Away Team Captain: {{away_team.captain}}</li>
+       <li>Away Team Players</li>
+      {{#each player in away_team.players}}
+        <li>Player {{player.id}}: {{player.name}}</li>
+        <li>{{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
+      {{/each}}
 </ul>

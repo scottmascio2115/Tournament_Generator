@@ -2,8 +2,7 @@
 
 <ul>
   {{#each}}
-    <li>{{name}}</li>
-    <li>{{bio}}</li>
-    <li>{{city}}</li>
+    <li>Player {{id}}: {{#link-to 'player' this }}{{name}}{{/link-to}}</li>
   {{/each}}
+
 </ul>
