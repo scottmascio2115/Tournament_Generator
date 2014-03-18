@@ -2,7 +2,7 @@
 
 <ul>
   {{#each}}
-    <li>{{jersey_name}}</li>
+    <li>{{#link-to 'team' this}}{{jersey_name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 

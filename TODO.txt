@@ -10,6 +10,6 @@
 [x] Set up git hub repo
 [x] Create links for games through tournaments
 [x] Create as many links as possible to all associations
-[] Redo seed data to include more players to show up after click captain name 
 [] Re-organize tempalates in directory
+[] Redo seed data to include more players to show up after click captain name
 [] Create team show pages and links from tournament show page
