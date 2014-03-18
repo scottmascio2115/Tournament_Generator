@@ -6,6 +6,12 @@ User.create! do |t|
   t.player_id = 1
 end
 
+User.create! do |t|
+  t.email = "alex@email.com"
+  t.password = "testingthepassword"
+  t.player_id = 2
+end
+
 scott = Player.create! do |t|
   t.name = 'scott'
   t.twitter_handle = '@s_mas'
@@ -25,16 +31,35 @@ scott = Player.create! do |t|
   t.tournaments_played = '0'
 end
 
+alex = Player.create! do |t|
+  t.name = 'alex'
+  t.twitter_handle = '@alex'
+  t.personal_url = 'alex.com'
+  t.phone = '134-123-1234'
+  t.bio = 'looking to play some ping pong'
+  t.captain = 'false'
+  t.tournament_creator = 'false'
+  t.city = 'columbus'
+  t.state = 'ohio'
+  t.zip = '60601'
+  t.games_won = '5'
+  t.games_lost = '2'
+  t.games_played = '7'
+  t.tournaments_won = '7'
+  t.tournaments_lost = '0'
+  t.tournaments_played = '7'
+end
+
+
 t1 = Team.create! do |t|
   t.jersey_name = 'chicago bulls'
-  t.captain = 'derek rose'
+  t.captain = ''
   t.tournament_id = t
 end
 
 
 t2 = Team.create! do |t|
   t.jersey_name = 'miami heat'
-  t.captain = 'lebron james'
   t.tournament_id = t
 end
 
@@ -55,6 +80,9 @@ t = Tournament.create! do |t|
   t.champion = ''
 end
 
+t2.captain = alex
+t1.captain = scott
+t2.players << alex
 t1.players << scott
 t.games << g
 puts "Complete!"

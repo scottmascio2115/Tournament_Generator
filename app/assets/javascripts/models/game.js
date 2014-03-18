@@ -5,3 +5,4 @@ TournyMadness.Game = DS.Model.extend({
   away_team: DS.belongsTo('team'),
   tournament: DS.belongsTo('tournament')
 });
+

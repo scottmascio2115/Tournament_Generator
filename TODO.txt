@@ -10,6 +10,8 @@
 [x] Set up git hub repo
 [x] Create links for games through tournaments
 [x] Create as many links as possible to all associations
-[] Re-organize tempalates in directory
-[] Redo seed data to include more players to show up after click captain name
-[] Create team show pages and links from tournament show page
+[x] Create team show pages and links from tournament show page
+[x] Redo seed data to include more players to show up after click captain name
+[x] Add more depth to the show templates for the player and team
+[] Make a function to capitalize the team names
+[] Figure out how to determine the captain of a team
