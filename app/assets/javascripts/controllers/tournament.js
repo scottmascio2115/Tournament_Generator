@@ -1,1 +1,5 @@
-TournyMadness.TournamentsController = Ember.ArrayController.extend({});
+TournyMadness.TournamentsController = Ember.ArrayController.extend({
+
+
+
+});

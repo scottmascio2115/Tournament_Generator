@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20140307171352) do
     t.string   "personal_url"
     t.string   "phone"
     t.text     "bio"
-    t.boolean  "captain",            default: false
     t.boolean  "tournament_creator", default: false
     t.string   "city"
     t.string   "state"
@@ -56,7 +55,7 @@ ActiveRecord::Schema.define(version: 20140307171352) do
 
   create_table "teams", force: true do |t|
     t.string   "jersey_name"
-    t.string   "captain"
+    t.integer  "captain_id"
     t.integer  "tournament_id"
     t.datetime "created_at"
     t.datetime "updated_at"

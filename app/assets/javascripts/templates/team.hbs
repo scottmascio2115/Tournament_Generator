@@ -2,3 +2,9 @@
 
 <h1>{{jersey_name}}</h1>
 <h1>{{captain}}</h1>
+<ul>
+  {{#each player in players}}
+     <li>  Players: </li>
+     <li>Player {{id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>

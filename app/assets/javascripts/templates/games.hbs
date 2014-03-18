@@ -2,6 +2,6 @@
 
 <ul>
   {{#each}}
-    <li>{{home_team.jersey_name}} vs {{away_team.jersey_name}}</li>
+    {{#link-to 'game' this}}Game: {{home_team.jersey_name}} vs {{away_team.jersey_name}}{{/link-to}}
   {{/each}}
 </ul>

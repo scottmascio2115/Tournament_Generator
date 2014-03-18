@@ -18,7 +18,6 @@ scott = Player.create! do |t|
   t.personal_url = 'scottmascio.com'
   t.phone = '134-123-1234'
   t.bio = 'looking for basketball and fishing tournaments'
-  t.captain = 'false'
   t.tournament_creator = 'false'
   t.city = 'chicago'
   t.state = 'illinois'
@@ -37,7 +36,6 @@ alex = Player.create! do |t|
   t.personal_url = 'alex.com'
   t.phone = '134-123-1234'
   t.bio = 'looking to play some ping pong'
-  t.captain = 'false'
   t.tournament_creator = 'false'
   t.city = 'columbus'
   t.state = 'ohio'
@@ -53,7 +51,6 @@ end
 
 t1 = Team.create! do |t|
   t.jersey_name = 'chicago bulls'
-  t.captain = ''
   t.tournament_id = t
 end
 
@@ -85,4 +82,7 @@ t1.captain = scott
 t2.players << alex
 t1.players << scott
 t.games << g
+t1.save
+t2.save
+t.save
 puts "Complete!"

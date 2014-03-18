@@ -2,7 +2,8 @@
 
 <ul>
   {{#each}}
-    <li>{{email}}</li>
+    <li>User {{id}}: {{#link-to 'user' this }}{{email}}{{/link-to}}</li>
   {{/each}}
 </ul>
+
 

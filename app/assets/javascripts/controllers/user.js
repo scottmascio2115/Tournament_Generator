@@ -1,1 +1,5 @@
-TournyMadness.UsersController = Ember.ArrayController.extend({});
+TournyMadness.UsersController = Ember.ArrayController.extend({
+
+
+
+});

@@ -6,6 +6,6 @@ TournyMadness.TeamsRoute = Ember.Route.extend({
 
 TournyMadness.TeamRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('team');
+    return this.store.find('team', params.team_id);
   }
 });

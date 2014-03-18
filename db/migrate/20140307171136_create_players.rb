@@ -6,7 +6,6 @@ class CreatePlayers < ActiveRecord::Migration
       t.string   :personal_url
       t.string   :phone
       t.text     :bio
-      t.boolean  :captain,                default: false
       t.boolean  :tournament_creator,     default: false
       t.string   :city
       t.string   :state

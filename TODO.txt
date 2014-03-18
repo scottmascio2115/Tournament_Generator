@@ -13,5 +13,13 @@
 [x] Create team show pages and links from tournament show page
 [x] Redo seed data to include more players to show up after click captain name
 [x] Add more depth to the show templates for the player and team
-[] Make a function to capitalize the team names
+[x] List players on team show page
+[x] Add ability to sort the fields that are listed
+[x] Make the game page more complete
+[x] Make the user page more complete
 [] Figure out how to determine the captain of a team
+[] Provide stats for each player... percentage won and lost etc
+[] Make team names unique
+[] Create tournament stats
+[] Determine how and which bootstrap framework to use
+[] CRUD applications for tournament, user, player
