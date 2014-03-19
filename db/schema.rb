@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307171352) do
+ActiveRecord::Schema.define(version: 20140319130147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,19 @@ ActiveRecord::Schema.define(version: 20140307171352) do
     t.datetime "updated_at"
   end
 
+  add_index "games", ["away_team_id"], name: "index_games_on_away_team_id", using: :btree
+  add_index "games", ["home_team_id"], name: "index_games_on_home_team_id", using: :btree
+  add_index "games", ["tournament_id"], name: "index_games_on_tournament_id", using: :btree
+
   create_table "player_teams", force: true do |t|
     t.integer  "team_id"
     t.integer  "player_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "player_teams", ["player_id"], name: "index_player_teams_on_player_id", using: :btree
+  add_index "player_teams", ["team_id"], name: "index_player_teams_on_team_id", using: :btree
 
   create_table "players", force: true do |t|
     t.string   "name"
@@ -61,6 +68,9 @@ ActiveRecord::Schema.define(version: 20140307171352) do
     t.datetime "updated_at"
   end
 
+  add_index "teams", ["captain_id"], name: "index_teams_on_captain_id", using: :btree
+  add_index "teams", ["tournament_id"], name: "index_teams_on_tournament_id", using: :btree
+
   create_table "tournaments", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -89,6 +99,7 @@ ActiveRecord::Schema.define(version: 20140307171352) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["player_id"], name: "index_users_on_player_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
