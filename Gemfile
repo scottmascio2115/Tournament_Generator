@@ -52,10 +52,12 @@ group :development, :test do
   gem 'letter_opener'
 end
 
-group :development, :staging do
+group :development do
   gem 'mail_safe', '~>0.3.1'
   gem "lol_dba"
   gem "bullet", '4.5.0'
+  gem "uniform_notifier"
+  gem 'ruby_gntp'
 end
 
 group :production do

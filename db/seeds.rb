@@ -22,12 +22,12 @@ scott = Player.create! do |t|
   t.city = 'chicago'
   t.state = 'illinois'
   t.zip = '60601'
-  t.games_won = '0'
-  t.games_lost = '0'
-  t.games_played = '0'
-  t.tournaments_won = '0'
-  t.tournaments_lost = '0'
-  t.tournaments_played = '0'
+  t.games_won = '10'
+  t.games_lost = '20'
+  t.games_played = '30'
+  t.tournaments_won = '10'
+  t.tournaments_lost = '12'
+  t.tournaments_played = '22'
 end
 
 alex = Player.create! do |t|
@@ -71,8 +71,8 @@ end
 t = Tournament.create! do |t|
   t.name = 'bulls vs heat'
   t.description = 'basketball tournament'
-  t.start_date = ''
-  t.end_date = ''
+  t.start_date = '2014-02-02'
+  t.end_date = '2014-03-03'
   t.style = 'bracket'
   t.champion = ''
 end

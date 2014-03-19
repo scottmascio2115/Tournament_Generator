@@ -1,5 +1,5 @@
 class Game < ActiveRecord::Base
-  belongs_to :tournament
-  belongs_to :home_team, class_name: 'Team'
-  belongs_to :away_team, class_name: 'Team'
+  belongs_to :tournament, inverse_of: :games
+  belongs_to :home_team, class_name: 'Team', inverse_of: :home_games
+  belongs_to :away_team, class_name: 'Team', inverse_of: :away_games
 end
