@@ -54,6 +54,8 @@ end
 
 group :development, :staging do
   gem 'mail_safe', '~>0.3.1'
+  gem "lol_dba"
+  gem "bullet", '4.5.0'
 end
 
 group :production do
