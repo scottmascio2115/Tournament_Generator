@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 20140319130147) do
     t.date     "end_date"
     t.string   "style"
     t.string   "champion"
+    t.date     "sign_up_start"
+    t.date     "sign_up_end"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

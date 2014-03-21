@@ -9,6 +9,7 @@ TournyMadness::Application.routes.draw do
       resources :tournaments
       resources :teams
       resources :games
+      resources :sessions, only: [:create, :destroy]
     end
   end
 

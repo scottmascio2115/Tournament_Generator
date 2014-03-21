@@ -1,0 +1,16 @@
+<h1>Create an Account</h1>
+<form class="form-horizontal user-form">
+  <fieldset>
+    <div class="control-group">
+      {{view Ember.TextField valueBinding='email' name='email' placeholder='Email'}}
+    </div>
+    <div class="control-group">
+      {{view Ember.TextField type="password" valueBinding='password' placeholder='Password'}}
+    </div>
+    <div class="control-group">
+      {{view Ember.TextField type="password" valueBinding='password_confirmation' placeholder='Password Confirmation'}}
+    </div>
+    <a href='#' {{action 'cancel'}} class='btn'>Cancel</a>
+    <button type="submit" {{action 'save'}} class='btn btn-large btn-primary'>Sign Up</button>
+  </fieldset>
+</form>

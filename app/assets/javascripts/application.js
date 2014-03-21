@@ -18,6 +18,7 @@
 //= require ember-data
 //= require_self
 //= require tourny_madness
+//= require moment-with-lang
 
 // for more details see: http://emberjs.com/guides/application/
 TournyMadness = Ember.Application.create({

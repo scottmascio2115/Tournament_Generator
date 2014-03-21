@@ -71,8 +71,10 @@ end
 t = Tournament.create! do |t|
   t.name = 'bulls vs heat'
   t.description = 'basketball tournament'
-  t.start_date = '2014-02-02'
-  t.end_date = '2014-03-03'
+  t.start_date = Time.new(2014, 3, 21, 2, 2, 2, "+02:00")
+  t.end_date = Time.new(2014, 3, 31, 2, 2, 2, "+02:00")
+  t.sign_up_start= ' '
+  t.sign_up_end= Time.new(2014, 3, 20, 2, 2, 2, "+02:00")
   t.style = 'bracket'
   t.champion = ''
 end

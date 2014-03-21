@@ -3,7 +3,9 @@
 TournyMadness.Router.map(function() {
   this.resource("players");
   this.resource("player", {path: "/:player_id"});
-  this.resource("users");
+  this.resource("users", function() {
+    this.route("new");
+  });
   this.resource("user", {path: "/:user_id"});
   this.resource("tournaments");
   this.resource("tournament", {path: "/:tournament_id"}, function() {
@@ -13,4 +15,8 @@ TournyMadness.Router.map(function() {
   this.resource("team", {path: "/:team_id"});
   this.resource("games");
   this.resource("game", {path: "/:game_id"});
+  this.resource("sessions", function() {
+    this.route("new");
+    this.route("destroy");
+  });
 });

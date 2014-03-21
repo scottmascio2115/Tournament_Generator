@@ -21,7 +21,7 @@ TournyMadness.PlayerController = Ember.ObjectController.extend({
     var tournaments_lost = this.get('tournaments_lost');
     var tournaments_played = this.get('tournaments_played');
       return percent = ((tournaments_lost/ tournaments_played) * 100).toFixed(2);
-  }.property('percent')
+  }.property('percent'),
 
 });
 

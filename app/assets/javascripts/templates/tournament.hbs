@@ -1,5 +1,4 @@
   <h1>Tournament {{name}}</h1>
-
  <ul>
   {{#each game in games}}
     <li>{{#link-to 'tournament.game' game }}Game {{id}}:{{/link-to}} {{#link-to 'team' game.home_team}}{{game.home_team.jersey_name}}{{/link-to}} vs  {{#link-to 'team' game.away_team}}{{game.away_team.jersey_name}}{{/link-to}}
