@@ -1,6 +1,9 @@
 TournyMadness::Application.routes.draw do
+  root "tournytime#home"
   devise_for :users
   get "ember/start"
+  get 'auth_redirect', to: 'ember#auth_redirect'
+  get 'tournymadness', to: 'ember#start'
 
   namespace :api do
     namespace :v1 do
@@ -13,6 +16,5 @@ TournyMadness::Application.routes.draw do
     end
   end
 
-  root "ember#start"
 end
 

@@ -15,8 +15,4 @@ TournyMadness.Router.map(function() {
   this.resource("team", {path: "/:team_id"});
   this.resource("games");
   this.resource("game", {path: "/:game_id"});
-  this.resource("sessions", function() {
-    this.route("new");
-    this.route("destroy");
-  });
 });

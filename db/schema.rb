@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20140319130147) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "player_id"
+    t.string   "authentication_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
