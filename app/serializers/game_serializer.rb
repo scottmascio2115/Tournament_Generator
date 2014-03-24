@@ -3,5 +3,5 @@ class GameSerializer < ActiveModel::Serializer
 
   has_one :tournament, embed: :ids, include: true
   has_one :home_team, embed: :ids, include: true, root: :teams
-  has_one :away_team, embed: :ids, inclide: true, root: :teams
+  has_one :away_team, embed: :ids, include: true, root: :teams
 end

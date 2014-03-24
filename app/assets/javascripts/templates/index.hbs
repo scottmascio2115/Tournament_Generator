@@ -1,7 +1,10 @@
 <h1>This is Tourny Madness</h1>
 <nav>
   {{#link-to 'players'}}Players{{/link-to}}
+  {{#link-to 'newplayer'}}Create Player{{/link-to}}
   {{#link-to 'tournaments'}}Tournaments{{/link-to}}
   {{#link-to 'games'}}Games{{/link-to}}
   {{#link-to 'teams'}}Teams{{/link-to}}
 </nav>
+
+<a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a>

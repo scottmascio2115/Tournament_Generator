@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :player, inverse_of: :player
+  belongs_to :player, inverse_of: :user
   validates :email, presence: true
 
   def ensure_auth_token!

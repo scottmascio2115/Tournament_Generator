@@ -1,4 +1,5 @@
 class EmberController < ApplicationController
+  before_filter :authenticate_user!
   layout "ember"
 
   def start

@@ -24,4 +24,3 @@ TournyMadness.PlayerController = Ember.ObjectController.extend({
   }.property('percent'),
 
 });
-

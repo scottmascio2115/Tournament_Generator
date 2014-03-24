@@ -2,6 +2,7 @@
 
 TournyMadness.Router.map(function() {
   this.resource("players");
+  this.resource('newplayer' , {path : 'player/new'});
   this.resource("player", {path: "/:player_id"});
   this.resource("users", function() {
     this.route("new");
