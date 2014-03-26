@@ -1,10 +1,16 @@
 <div class='container'>
-   <h1>Tournament {{name}}</h1>
-   <ul>
-    {{#each game in games}}
-      <li>{{#link-to 'tournament.game' game }}Game {{id}}:{{/link-to}} {{#link-to 'team' game.home_team}}{{game.home_team.jersey_name}}{{/link-to}} vs  {{#link-to 'team' game.away_team}}{{game.away_team.jersey_name}}{{/link-to}}
-    {{/each}}
-  {{outlet}}
-  </ul>
+    <div class="row">
+        <div class="span4">
+          <table class='table'>
+            {{#each game in games}}
+            <tr><td>
+            {{#link-to 'tournament.game' game }}Game {{id}}:{{/link-to}} {{#link-to 'tournament.team' game.home_team}}{{game.home_team.jersey_name}}{{/link-to}} vs  {{#link-to 'tournament.team' game.away_team}}{{game.away_team.jersey_name}}{{/link-to}}
+            <tr><td>
+            {{/each}}
+           </table>
+        </div>
+      <div class="span9">
+        {{outlet}}
+      </div>
+  </div>
 </div>
-

@@ -7,6 +7,9 @@ TournyMadness.ApplicationRoute = Ember.Route.extend({
       transition.abort();
       return auth.login();
     }
+  },
+  model: function() {
+    return this.controllerFor('authentication').get('currentUser');
   }
 });
 

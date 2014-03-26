@@ -9,12 +9,18 @@ TournyMadness.Router.map(function() {
     this.route("new");
   });
   this.resource("user", {path: "/:user_id"});
-  this.resource("tournaments");
-  this.resource("tournament", {path: "/:tournament_id"}, function() {
-    this.route("game", {path: "games/:game_id"});
+  this.resource("tournaments", function(){
+    this.resource("tournament", {path: "/:tournament_id"}, function() {
+      this.route("game", {path: "games/:game_id"});
+      this.route("team", {path: "team/:team_id"});
+    });
   });
-  this.resource("teams");
-  this.resource("team", {path: "/:team_id"});
-  this.resource("games");
-  this.resource("game", {path: "/:game_id"});
+  this.resource("teams", function(){
+    this.resource("team", {path: "/:team_id"});
+  });
+  this.resource("games", function(){
+    this.resource("game", {path: "/:game_id"}, function(){
+    this.route("team", {path: "team/:team_id"});
+    });
+  });
 });

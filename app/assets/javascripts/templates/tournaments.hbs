@@ -1,12 +1,23 @@
 <div class='container'>
-  <h1>Tournaments</h1>
-
-  <ul>
-    {{#each}}
-      <li>Tournament {{id}}: {{#link-to 'tournament' this }}{{name}}{{/link-to}}</li>
-      <h6>Start Date: {{format-date start_date}} End Date: {{format-date end_date}}</h6>
-      <h6>Tournament Created : {{format-date created_at}}</h6>
-      <h6>Tournament Sign Up Period from {{format-date created_at}} till {{format-date sign_up_end}} </h6>
-    {{/each}}
-  </ul>
+  <h1 class="muted text-center">Tournaments</h1>
+    <div class="row">
+        <div class="span3">
+          <table class='table'>
+            {{#each}}
+            <tr><td>
+              Tournament {{id}}: {{#link-to 'tournament' this }}{{name}}{{/link-to}}
+              <h6>Start Date: {{format-date start_date}}</h6>
+              <h6>End Date: {{format-date end_date}}</h6>
+              <h6>Created : {{format-date created_at}}</h6>
+              <h6>Sign Up from {{format-date created_at}} till {{format-date sign_up_end}} </h6>
+            <tr><td>
+            {{/each}}
+           </table>
+        </div>
+      <div class="span9">
+        {{outlet}}
+      </div>
+    </div>
 </div>
+
+

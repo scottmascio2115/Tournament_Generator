@@ -1,4 +1,16 @@
 <div class='container'>
+  <div id='welcome'>
+    <h6> Welcome {{name}} !! </h6>
+  </div>
+
+  <h1>It's Tourny Time !!</h1>
+  <ul class="nav nav-pills">
+     <li> {{#link-to 'players'}}Players{{/link-to}}</li>
+     <li> {{#link-to 'tournaments'}}Tournaments{{/link-to}}</li>
+     <li> {{#link-to 'games'}}Games{{/link-to}}</li>
+     <li> {{#link-to 'teams'}}Teams{{/link-to}}</li>
+   </ul>
+
     <div class="navbar navbar-inner  navbar-fixed-bottom">{{#link-to 'index'}}Home{{/link-to}} | <a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a></div>
     {{outlet}}
 </div>

@@ -1,9 +1,20 @@
 <div class='container'>
-  <h1>Games</h1>
-
-  <ul>
-    {{#each}}
-      {{#link-to 'game' this}}Game: {{home_team.jersey_name}} vs {{away_team.jersey_name}}{{/link-to}}
-    {{/each}}
-  </ul>
+  <h1 class="muted text-center">Games</h1>
+    <div class="row">
+        <div class="span3">
+          <table class='table'>
+            {{#each}}
+            <tr><td>
+              {{#link-to 'game' this}}{{home_team.jersey_name}} vs {{away_team.jersey_name}}{{/link-to}}
+            <tr><td>
+            {{/each}}
+           </table>
+        </div>
+      <div class="span9">
+        {{outlet}}
+      </div>
+    </div>
 </div>
+
+
+
