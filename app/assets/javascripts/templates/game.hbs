@@ -1,6 +1,16 @@
 <div class='container'>
-  <ul>
-    Match Up: {{#link-to 'game.team' home_team}}{{home_team.jersey_name}}{{/link-to}} vs {{#link-to 'game.team' away_team}}{{away_team.jersey_name}}{{/link-to}}
-  </ul>
-{{outlet}}
+    <div class="row">
+        <div class="span4">
+          <table class='table'>
+            <tr><td>
+              Match Up: {{#link-to 'game.team' home_team}}{{home_team.jersey_name}}{{/link-to}} vs {{#link-to 'game.team' away_team}}{{away_team.jersey_name}}{{/link-to}}
+            <tr><td>
+           </table>
+        </div>
+      <div class="span9">
+        {{outlet}}
+    </div>
 </div>
+
+
+

@@ -1,10 +1,16 @@
 <div class='container'>
-  <h1 class="muted text-center">Teams</h1>
-
-  <ul>
-    {{#each}}
-      <li>{{#link-to 'team' this}}{{jersey_name}}{{/link-to}}</li>
-    {{/each}}
-  </ul>
-{{outlet}}
+    <div class="row">
+        <div class="span4">
+          <table class='table'>
+            {{#each}}
+            <tr><td>
+              {{#link-to 'team' this}}{{jersey_name}}{{/link-to}}
+            <tr><td>
+            {{/each}}
+           </table>
+        </div>
+      <div class="span9">
+        {{outlet}}
+      </div>
+  </div>
 </div>

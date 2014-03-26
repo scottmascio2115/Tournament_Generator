@@ -1,16 +1,16 @@
 <div class='container'>
-<ul>
-    <li>Home Team Captain: {{home_team.captain.name}}</li>
-       <li>Home Team Players</li>
-      {{#each player in home_team.players}}
-        <li>Home Team Players</li>
-        <li>Player {{player.id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
-      {{/each}}
+  <ul>
+      <li>Home Team Captain: {{home_team.captain.name}}</li>
+         <li>Home Team Players</li>
+        {{#each player in home_team.players}}
+          <li>Home Team Players</li>
+          <li>Player {{player.id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
+        {{/each}}
 
-    <li>Away Team Captain: {{away_team.captain.name}}</li>
-       <li>Away Team Players</li>
-      {{#each player in away_team.players}}
-        <li>Player {{player.id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
-      {{/each}}
-</ul>
+      <li>Away Team Captain: {{away_team.captain.name}}</li>
+         <li>Away Team Players</li>
+        {{#each player in away_team.players}}
+          <li>Player {{player.id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
+        {{/each}}
+  </ul>
 </div>
