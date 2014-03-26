@@ -6,7 +6,7 @@ gem "ember-rails"
 gem 'ember-source', '1.4.0'
 gem "foreman"
 gem "pg"
-
+gem "twitter-bootstrap-rails"
 
 gem 'rake'
 gem 'rails_12factor', group: :production

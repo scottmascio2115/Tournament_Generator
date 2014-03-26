@@ -1,7 +1,18 @@
-<h1>Players</h1>
-
-<ul>
-  {{#each}}
-    <li>Player {{id}}: {{#link-to 'player' this }}{{name}}{{/link-to}}</li>
-  {{/each}}
-</ul>
+<div class='container'>
+  <h1 class="muted text-center">Players</h1>
+    <div class="row">
+        <div class="span3">
+          <table class='table'>
+            {{#link-to 'players.new'}} Create Player {{/link-to}}
+            {{#each}}
+            <tr><td>
+              Player {{id}}: {{#link-to 'player' this }}{{name}}{{/link-to}}
+            <tr><td>
+            {{/each}}
+           </table>
+        </div>
+      <div class="span9">
+          {{outlet}}
+      </div>
+    </div>
+</div>

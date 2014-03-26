@@ -1,9 +1,10 @@
 // For more information see: http://emberjs.com/guides/routing/
 
 TournyMadness.Router.map(function() {
-  this.resource("players");
-  this.resource('newplayer' , {path : 'player/new'});
-  this.resource("player", {path: "/:player_id"});
+  this.resource("players", function(){
+    this.resource("player", {path: "/:player_id"});
+    this.route("new");
+  });
   this.resource("users", function() {
     this.route("new");
   });

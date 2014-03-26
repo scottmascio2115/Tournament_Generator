@@ -1,10 +1,25 @@
-<h1>This is Tourny Madness</h1>
-<nav>
-  {{#link-to 'players'}}Players{{/link-to}}
-  {{#link-to 'newplayer'}}Create Player{{/link-to}}
-  {{#link-to 'tournaments'}}Tournaments{{/link-to}}
-  {{#link-to 'games'}}Games{{/link-to}}
-  {{#link-to 'teams'}}Teams{{/link-to}}
-</nav>
+<div class='container'>
+  <div id='welcome'>
+    <h6> Welcome {{param}} !! </h6>
+  </div>
 
-<a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a>
+  <h1>It's Tourny Time !!</h1>
+  <ul class="nav nav-pills">
+     <li> {{#link-to 'players'}}Players{{/link-to}}</li>
+     <li> {{#link-to 'tournaments'}}Tournaments{{/link-to}}</li>
+     <li> {{#link-to 'games'}}Games{{/link-to}}</li>
+     <li> {{#link-to 'teams'}}Teams{{/link-to}}</li>
+   </ul>
+  <div class="navbar navbar-fixed-bottom"></div>
+
+      <div class="row">
+        <div class="span6">
+        <p> somthing describing the tourny madness app </p>
+        </div>
+
+         <div class="span6">
+         <p> somthing maybe a picture</p>
+
+         </div>
+      </div>
+</div>

@@ -1,3 +1,4 @@
-{{#link-to 'index'}}Home{{/link-to}}
-
-{{outlet}}
+<div class='container'>
+    <div class="navbar navbar-inner  navbar-fixed-bottom">{{#link-to 'index'}}Home{{/link-to}} | <a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a></div>
+    {{outlet}}
+</div>

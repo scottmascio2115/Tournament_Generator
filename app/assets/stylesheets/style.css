@@ -1,0 +1,24 @@
+h1 {
+  font-family: 'Bangers', cursive;
+  text-align: center;
+}
+
+#welcome {
+  color: red;
+  font-family: 'Candal', sans-serif;
+}
+
+.container{
+  color: black;
+  font-family: 'Candal', sans-serif;
+}
+
+.container a{
+  color: #71A35A;
+  font-family: 'Candal', sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+

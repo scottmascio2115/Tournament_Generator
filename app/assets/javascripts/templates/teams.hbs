@@ -1,8 +1,9 @@
-<h1>Teams</h1>
+<div class='container'>
+  <h1>Teams</h1>
 
-<ul>
-  {{#each}}
-    <li>{{#link-to 'team' this}}{{jersey_name}}{{/link-to}}</li>
-  {{/each}}
-</ul>
-
+  <ul>
+    {{#each}}
+      <li>{{#link-to 'team' this}}{{jersey_name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</div>
