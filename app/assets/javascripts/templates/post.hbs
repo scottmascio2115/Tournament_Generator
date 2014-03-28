@@ -1,6 +1,6 @@
 <div class='container'>
     <div class="row">
-        <div class="span4">
+        <div class="span3">
          <dl>
            <dt> Title:</dt>
            <dd>{{title}}</dd>
@@ -9,12 +9,16 @@
            <dt>Author:</dt> 
            <dd>{{author}}</dd>
           </dl>
+         </div>
+         <div class="span3">
           {{#each comment in comments}}
-          <li>Comments:</li>
-           <li>{{#link-to 'post.comment' comment}}{{comment.title}}{{/link-to}}</li>
+         <dl>
+           <dt>Comments: </dt>
+           <dd>{{#link-to 'post.comment' comment}}{{comment.title}}{{/link-to}}</di>
           {{/each}}
+         </dl>
         </div>
-      <div class="span9">
+      <div class="span3">
         {{outlet}}
     </div>
 </div>
