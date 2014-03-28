@@ -16,5 +16,5 @@ TournyMadness.Player = DS.Model.extend({
   tournaments_lost: DS.attr('number'),
   tournaments_played: DS.attr('number'),
   user: DS.belongsTo('user'),
-  teams: DS.hasMany("team")
+  teams: DS.hasMany('team')
 });

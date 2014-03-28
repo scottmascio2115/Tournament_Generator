@@ -1,11 +1,21 @@
 <div class='container'>
+    <div class="row">
+        <div class="span4">
+          <table class='table'>
 
-  <h1>{{jersey_name}}</h1>
-  <h1>Captain: {{captain.name}}</h1>
-  <ul>
-    {{#each player in players}}
-       <li>  Players: </li>
-       <li>Player {{id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}</li>
-    {{/each}}
-  </ul>
+            <h1>{{jersey_name}}</h1>
+            <h1>Captain: {{captain.name}}</h1>
+            <tr><td>
+              {{#each player in players}}
+               Players: 
+               Player {{id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}
+              {{/each}}
+            <tr><td>
+           </table>
+        </div>
+      <div class="span9">
+        {{outlet}}
+    </div>
 </div>
+
+

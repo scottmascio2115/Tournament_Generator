@@ -1,0 +1,20 @@
+<div class='container'>
+    <div class="row">
+        <div class="span3">
+          {{#link-to 'posts.new'}} Talk some trash! {{/link-to}}
+          <br>
+          <br>
+          <table class='table'>
+            {{#each}}
+            <tr>
+             <td> Post {{id}}: {{#link-to 'post' this }}{{title}}{{/link-to}}</td>
+            </tr>
+            {{/each}}
+           </table>
+        </div>
+      <div class="span9">
+          {{outlet}}
+      </div>
+    </div>
+</div>
+

@@ -12,8 +12,6 @@ TournyMadness.PlayerRoute = Ember.Route.extend({
 
 
 TournyMadness.PlayersNewRoute = Ember.Route.extend({
-  model: function() {
-  }
 });
 
 

@@ -1,0 +1,21 @@
+<div class='container'>
+    <div class="row">
+        <div class="span4">
+         <dl>
+           <dt> Title:</dt>
+           <dd>{{title}}</dd>
+           <dt>Description:</dt>
+           <dd>{{description}}</dd>
+           <dt>Author:</dt> 
+           <dd>{{author}}</dd>
+          </dl>
+          {{#each comment in comments}}
+          <li>Comments:</li>
+           <li>{{#link-to 'post.comment' comment}}{{comment.title}}{{/link-to}}</li>
+          {{/each}}
+        </div>
+      <div class="span9">
+        {{outlet}}
+    </div>
+</div>
+
