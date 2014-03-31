@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class='container'>
+  <div id="flash_notice" class="row">
+      <% if flash[:notice] %>
+        <div class="alert alert-info"><%= flash[:notice] %><a href class="close">x</a></div>
+      <% elsif flash[:error] %>
+        <div class="alert alert-warning"><%= flash[:error] %><a href class="close">x</a></div>
+      <% elsif flash[:success] %>
+        <div class="alert alert-success"><%= flash[:success] %><a href class="close">x</a></div>
+      <% end %>
+  </div>
+</div>
 
+<div class='container'>
 <%= yield %>
-<link href='http://fonts.googleapis.com/css?family=Candal|Bangers' rel='stylesheet' type='text/css'>
+</div>
+
+  <link href='http://fonts.googleapis.com/css?family=Candal|Bangers' rel='stylesheet' type='text/css'>
+
 </body>
 </html>
