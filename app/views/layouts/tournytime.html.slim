@@ -5,21 +5,23 @@ html
   = stylesheet_link_tag "application" 
   = javascript_include_tag "tournytime" 
   = csrf_meta_tags 
+
 body
-    .container
-      #flash_notice.row
-        - if flash[:notice]
-          .alert.alert-info
-            = flash[:notice]
-            a.close href=""  x
-        - elsif flash[:error]
-          .alert.alert-warning
-            = flash[:error]
-            a.close href=""  x
-        - elsif flash[:success]
-          .alert.alert-success
-            = flash[:success]
-            a.close href=""  x
+  .container
+    #flash_notice.row
+      - if flash[:notice] 
+        .alert.alert-info
+          = flash[:notice] 
+          a.close href="" x
+      - elsif flash[:error] 
+        .alert.alert-warning
+          = flash[:error] 
+          a.close href="" x
+      - elsif flash[:success] 
+        .alert.alert-success
+          = flash[:success] 
+          a.close href="" x
+
 .container
   = yield 
 

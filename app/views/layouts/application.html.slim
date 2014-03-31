@@ -1,13 +1,14 @@
 doctype html
 html
-head
-  title TournyMadness
+  head
+    title TournyMadness
   = stylesheet_link_tag "application" 
+  = javascript_include_tag "tournytime" 
   = csrf_meta_tags 
 
 body
-.container
-  #flash_notice.row
+  .container
+    #flash_notice.row
       - if flash[:notice] 
         .alert.alert-info
           = flash[:notice] 
