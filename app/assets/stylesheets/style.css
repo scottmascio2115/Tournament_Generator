@@ -29,3 +29,9 @@ dl dd{
 .navbar {
   color: #71A35A;
 }
+
+.navbar.navbar-default.navbar-fixed-bottom{
+  text-align: center;
+  margin-bottom: 10px;
+
+}
