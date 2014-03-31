@@ -1,0 +1,17 @@
+.container
+  h1 It's Tourny Time !!
+  .navbar
+    .container
+      ul.nav.nav-pills.pull-right
+        - if user_signed_in?
+          p.navbar-text
+            | Signed in as: #{current_user.email}
+          li= link_to 'Sign out', destroy_user_session_path, :method => :delete
+        - else
+          li= link_to 'Sign in', new_user_session_path
+          li= link_to 'Sign up', new_user_registration_path
+  .row
+    .span6
+      p somthing describing the tourny madness app
+    .span6
+      p somthing maybe a picture
