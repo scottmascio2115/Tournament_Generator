@@ -35,3 +35,15 @@ dl dd{
   margin-bottom: 10px;
 
 }
+
+
+.nav li{
+  border: 1px solid #71A35A;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.nav li a{
+  margin: 0;
+}
+
