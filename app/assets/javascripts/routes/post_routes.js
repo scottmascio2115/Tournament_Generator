@@ -19,3 +19,6 @@ TournyMadness.PostCommentRoute= Ember.Route.extend({
   }
 });
 
+TournyMadness.PostNewCommentRoute = Ember.Route.extend({
+});
+

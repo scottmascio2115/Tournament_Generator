@@ -3,8 +3,8 @@
         <div class="span4">
           <table class='table'>
             <tr><td>
-               Home Team Captain: {{home_team.captain.name}}
-               Home Team Players
+               Home Team Captain: {{home_team.captain.name}}<br>
+               Home Team Players:
               {{#each player in home_team.players}}
                 Home Team Players
                 Player {{player.id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}
@@ -12,8 +12,8 @@
             <tr><td>
 
             <tr><td>
-               Away Team Captain: {{away_team.captain.name}}
-               Away Team Players
+               Away Team Captain: {{away_team.captain.name}}<br>
+               Away Team Players:
               {{#each player in away_team.players}}
                 Player {{player.id}}: {{#link-to 'player' player}}{{player.name}}{{/link-to}}
              {{/each}}

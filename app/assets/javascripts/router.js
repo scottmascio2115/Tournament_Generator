@@ -32,6 +32,7 @@ TournyMadness.Router.map(function() {
   this.resource("posts", function(){
     this.resource("post", {path: "/:post_id"}, function() {
       this.route("comment", {path: "comment/:comment_id"});
+      this.route("new_comment", {path: "comment/new"});
     });
     this.route("new");
   });
