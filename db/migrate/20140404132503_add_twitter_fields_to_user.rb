@@ -3,5 +3,6 @@ class AddTwitterFieldsToUser < ActiveRecord::Migration
     add_column :users, :twitter_id, :string
     add_column :users, :twitter_screen_name, :string
     add_column :users, :twitter_display_name, :string
+    add_column :users, :twitter_location, :string
   end
 end

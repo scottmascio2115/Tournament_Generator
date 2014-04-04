@@ -39,8 +39,10 @@ end
 
 gem 'jquery-rails'
 gem 'validates_timeliness'
+gem "binding_of_caller"
 
 group :development, :test do
+  gem "better_errors"
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'ffaker'

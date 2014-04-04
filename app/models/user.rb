@@ -24,10 +24,11 @@ class User < ActiveRecord::Base
     where(auth.slice(:provider, :uid)).first_or_create do |user|
         user.provider = auth.provider
         user.uid = auth.uid
-        user.twitter_id = auth.id
-        user.twitter_screen_name = auth.screen_name
-        user.twitter_display_name = auth.display_name
-        user.email = auth.info.email
+        user.twitter_id = auth.extra.raw_info.id
+        user.twitter_screen_name = auth.extra.raw_info.screen_name
+        user.twitter_display_name = auth.extra.raw_info.name
+        user.email = #todo
+        user.twitter_location = auth.info.location
         user.password = Devise.friendly_token[0,20]
     end
   end

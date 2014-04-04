@@ -136,6 +136,7 @@ ActiveRecord::Schema.define(version: 20140404132503) do
     t.string   "twitter_id"
     t.string   "twitter_screen_name"
     t.string   "twitter_display_name"
+    t.string   "twitter_location"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
