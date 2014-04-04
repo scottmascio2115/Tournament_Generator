@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
 
   belongs_to :player, inverse_of: :user
   has_many :posts, inverse_of: :user
-  validates :email, presence: true
 
   def ensure_auth_token!
     self.authentication_token = generate_auth_token
@@ -27,7 +26,6 @@ class User < ActiveRecord::Base
         user.twitter_id = auth.extra.raw_info.id
         user.twitter_screen_name = auth.extra.raw_info.screen_name
         user.twitter_display_name = auth.extra.raw_info.name
-        user.email = #todo
         user.twitter_location = auth.info.location
         user.password = Devise.friendly_token[0,20]
     end
@@ -39,5 +37,9 @@ class User < ActiveRecord::Base
     else
       email
     end
+  end
+
+  def email_required?
+    twitter_id.nil?
   end
 end
