@@ -10,6 +10,8 @@
         - else
           li= link_to 'Sign in', new_user_session_path
           li= link_to 'Sign up', new_user_registration_path
+          li= link_to  image_tag('twitter_64.png'), user_omniauth_authorize_path(:twitter)
+
   .row
     .span6
       p somthing describing the tourny madness app

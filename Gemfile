@@ -26,6 +26,10 @@ gem 'bitters', '~> 0.9.2'
 gem 'nokogiri', '~> 1.6.1'
 gem 'premailer-rails', '~> 1.7.0'
 gem 'heroku'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'figaro'
+
 
 group :assets do
   gem 'sass-rails'

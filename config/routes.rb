@@ -1,6 +1,6 @@
 TournyMadness::Application.routes.draw do
   root "tournytime#home"
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   get "ember/start"
   get 'auth_redirect', to: 'ember#auth_redirect'
   get 'tournymadness', to: 'ember#start'

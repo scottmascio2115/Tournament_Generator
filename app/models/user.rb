@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   belongs_to :player, inverse_of: :user
   has_many :posts, inverse_of: :user
@@ -17,6 +17,26 @@ class User < ActiveRecord::Base
     loop do
       token = Devise.friendly_token
       break token unless User.where(authentication_token: token).exists?
+    end
+  end
+
+  def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
+    where(auth.slice(:provider, :uid)).first_or_create do |user|
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.twitter_id = auth.id
+        user.twitter_screen_name = auth.screen_name
+        user.twitter_display_name = auth.display_name
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0,20]
+    end
+  end
+
+  def display_name
+    if twitter_id
+      "#{twitter_display_name}"
+    else
+      email
     end
   end
 end
