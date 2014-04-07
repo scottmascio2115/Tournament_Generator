@@ -42,10 +42,6 @@ t = Tournament.create! do |t|
   t.champion = ''
 end
 
-t2.captain = alex
-t1.captain = scott
-t2.players << alex
-t1.players << scott
 t.games << g
 t1.save
 t2.save
