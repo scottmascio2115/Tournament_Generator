@@ -12,43 +12,6 @@ User.create! do |t|
   t.player_id = 2
 end
 
-scott = Player.create! do |t|
-  t.name = 'scott'
-  t.twitter_handle = '@s_mas'
-  t.personal_url = 'scottmascio.com'
-  t.phone = '134-123-1234'
-  t.bio = 'looking for basketball and fishing tournaments'
-  t.tournament_creator = 'false'
-  t.city = 'chicago'
-  t.state = 'illinois'
-  t.zip = '60601'
-  t.games_won = '10'
-  t.games_lost = '20'
-  t.games_played = '30'
-  t.tournaments_won = '10'
-  t.tournaments_lost = '12'
-  t.tournaments_played = '22'
-end
-
-alex = Player.create! do |t|
-  t.name = 'alex'
-  t.twitter_handle = '@alex'
-  t.personal_url = 'alex.com'
-  t.phone = '134-123-1234'
-  t.bio = 'looking to play some ping pong'
-  t.tournament_creator = 'false'
-  t.city = 'columbus'
-  t.state = 'ohio'
-  t.zip = '60601'
-  t.games_won = '5'
-  t.games_lost = '2'
-  t.games_played = '7'
-  t.tournaments_won = '7'
-  t.tournaments_lost = '0'
-  t.tournaments_played = '7'
-end
-
-
 t1 = Team.create! do |t|
   t.jersey_name = 'chicago bulls'
   t.tournament_id = t
