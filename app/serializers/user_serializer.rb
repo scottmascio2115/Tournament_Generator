@@ -5,6 +5,10 @@ class UserSerializer < ActiveModel::Serializer
 
   def name
     namePortion = email.split('@').first
-    "#{namePortion.dasherize.parameterize.capitalize}"
+    if namePortion
+      "#{namePortion.dasherize.parameterize.capitalize}"
+    else
+      twitter_screen_name
+    end
   end
 end
