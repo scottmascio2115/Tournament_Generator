@@ -7,6 +7,7 @@ gem 'ember-source', '1.4.0'
 gem "foreman"
 gem "pg"
 gem "twitter-bootstrap-rails"
+gem "figaro"
 
 gem 'rake'
 gem 'rails_12factor', group: :production
@@ -28,7 +29,6 @@ gem 'premailer-rails', '~> 1.7.0'
 gem 'heroku'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'figaro'
 
 
 group :assets do
