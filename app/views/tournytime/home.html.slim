@@ -2,15 +2,15 @@
   h1 It's Tourny Time !!
   .navbar
     .container
-      ul.nav.nav-pills.pull-right
+      ul.nav.nav-pills.pull-left
         - if user_signed_in?
           p.navbar-text
             | Signed in as: #{current_user.email}
           li= link_to 'Sign out', destroy_user_session_path, :method => :delete
         - else
           li= link_to 'Sign in', new_user_session_path
+          li= link_to 'Sign in via Twitter', user_omniauth_authorize_path(:twitter)
           li= link_to 'Sign up', new_user_registration_path
-          li= link_to  image_tag('twitter_64.png'), user_omniauth_authorize_path(:twitter)
 
   .row
     .span6

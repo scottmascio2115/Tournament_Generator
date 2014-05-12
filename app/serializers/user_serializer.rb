@@ -4,11 +4,6 @@ class UserSerializer < ActiveModel::Serializer
   has_many :posts, embed: :ids, include: true
 
   def name
-    namePortion = email.split('@').first
-    if namePortion
-      "#{namePortion.dasherize.parameterize.capitalize}"
-    else
-      twitter_screen_name
-    end
+    email.present? ? email.split('@').first.dasherize.parameterize.capitalize : twitter_screen_name
   end
 end
