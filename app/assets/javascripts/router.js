@@ -6,6 +6,8 @@ TournyMadness.Router.map(function() {
     this.route("new");
   });
 
+  this.route("new_tournament");
+
   this.resource("users", function() {
     this.route("new");
   });

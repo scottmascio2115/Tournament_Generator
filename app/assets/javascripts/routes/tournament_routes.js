@@ -22,3 +22,6 @@ TournyMadness.TournamentTeamRoute = Ember.Route.extend({
   }
 });
 
+
+TournyMadness.NewTournamentRoute = Ember.Route.extend({
+});
